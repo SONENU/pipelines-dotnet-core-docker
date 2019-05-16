@@ -1,4 +1,14 @@
 # Jekyll site
+- task: AzureIoTEdge@2
+  inputs:
+    action: 'Deploy to IoT Edge devices'
+    deploymentFilePath: '$(System.DefaultWorkingDirectory)/**/*.json'
+    azureSubscription: 'Connected Stores Dev(3cb570e3-33ed-4a71-b363-86b66d9c367f)'
+    iothubname: 'signifyAU-IoT-Hub-Dev'
+    deploymentid: '$(System.TeamProject)-devops-deployment'
+    priority: '0'
+    deviceOption: 'Single Device'
+    deviceId: '1234566666-98-5d-ad-70-9a-99'
 # Package your Jekyll site using the jekyll/builder Docker container image.
 # Add steps that build, test, save build artifacts, deploy, and more:
 # https://aka.ms/yaml
